@@ -62,7 +62,7 @@ export default class Translator extends Component {
 		return (
 			<div>
 				<h2>{this.translate(this.state.inputValue)} </h2>
-				<input
+				<input type="text"
 					value={this.state.inputValue}
 					onKeyUp={evt => this.updateInputValue(evt)}
 				/>
