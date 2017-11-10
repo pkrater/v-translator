@@ -48,8 +48,7 @@ export default class Translator extends Component {
 						? i === -1 ? ' ' : this.state.letters[i + 1]
 						: this.state.letters[0]
 			);
-		//console.log(n);
-		return <div>{n}</div>;
+		return <div class={style.result}>{n}</div>;
 	}
 
 	updateInputValue(evt) {
@@ -61,11 +60,11 @@ export default class Translator extends Component {
 	render() {
 		return (
 			<div>
-				<h2>{this.translate(this.state.inputValue)} </h2>
 				<input type="text"
 					value={this.state.inputValue}
 					onKeyUp={evt => this.updateInputValue(evt)}
 				/>
+				{this.translate(this.state.inputValue)}
 			</div>
 		);
 	}
