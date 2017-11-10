@@ -44,7 +44,7 @@ export default class Translator extends Component {
 			.map(letter => this.state.letters.indexOf(letter))
 			.map(
 				i =>
-					i != 28
+					i !== 28
 						? i === -1 ? ' ' : this.state.letters[i + 1]
 						: this.state.letters[0]
 			);
